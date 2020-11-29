@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Qamer",
+      "last_name": "Ali",
+      "email": "ali@yahoo.com"
+    },
+    {
+      "id": 5,
+      "first_name": "Cheyanne",
+      "last_name": "Ernser",
+      "email": "Amber.Spinka62@yahoo.com"
+    },
+    {
+      "id": 6,
+      "first_name": "Jeff",
+      "last_name": "Bogisich",
+      "email": "Bettie.Ritchie60@hotmail.com"
+    },
+    {
+      "id": 7,
+      "first_name": "Simone",
+      "last_name": "Zemlak",
+      "email": "Dorris49@gmail.com"
+    },
+    {
+      "id": 8,
+      "first_name": "Demond",
+      "last_name": "Barrows",
+      "email": "Nestor81@yahoo.com"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "title": "shoe",
+      "description": "addidas",
+      "price": "50$",
+      "creator": "Ali",
+      "status": "draft"
+    },
+    {
+      "id": "p2",
+      "title": "shoe",
+      "description": "nike",
+      "price": "100$",
+      "creator": "Ali",
+      "status": "draft"
+    }
+  ],
+  "userproducts": [
+    {
+      "id": "up1",
+      "userid": "1",
+      "title": "shoe",
+      "description": "addidas",
+      "price": "50$",
+      "creator": "Ali",
+      "status": "draft"
+    },
+    {
+      "id": "up2",
+      "userid": "1",
+      "title": "shoe",
+      "description": "nike",
+      "price": "100$",
+      "creator": "Ali",
+      "status": "draft"
+    }
+  ]
+}
