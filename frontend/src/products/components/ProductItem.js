@@ -10,8 +10,8 @@ const ProductItem = (props) => {
         <td>{props.price}</td>
         <td>{props.creatorId}</td>
         <td>{props.status}</td>
-        <td><Button style={{ marginLeft: '10px' }}>View</Button>
-            <Button style={{ marginLeft: '10px' }}>Edit</Button></td>
+        <td><Button variant="dark" style={{ marginLeft: '10px' }}>View</Button>
+            <Button variant="dark" style={{ marginLeft: '10px' }}>Edit</Button></td>
     </tr>;
 };
 

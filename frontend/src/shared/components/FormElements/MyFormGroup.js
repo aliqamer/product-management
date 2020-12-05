@@ -55,7 +55,7 @@ const MyFormGroup = (props) => {
             <Form.Label>{props.label}</Form.Label>
             <Form.Control
                 name={props.name}
-                type={props.email}
+                type={props.type}
                 placeholder={props.placeholder}
                 onChange={changeHandler}
                 onBlur={touchHandler}

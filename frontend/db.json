@@ -4,6 +4,7 @@
       "id": 1,
       "first_name": "Qamer",
       "last_name": "Ali",
+      "username": "Ali",
       "email": "ali@yahoo.com"
     },
     {
@@ -29,6 +30,12 @@
       "first_name": "Demond",
       "last_name": "Barrows",
       "email": "Nestor81@yahoo.com"
+    },
+    {
+      "email": "asdw@a.com",
+      "first_name": "new",
+      "password": "asdfa",
+      "id": 9
     }
   ],
   "products": [
@@ -47,6 +54,12 @@
       "price": "100$",
       "creator": "Ali",
       "status": "draft"
+    },
+    {
+      "title": "added more channels",
+      "description": "any description",
+      "price": "10",
+      "id": "cm-rMoI"
     }
   ],
   "userproducts": [
@@ -67,6 +80,14 @@
       "price": "100$",
       "creator": "Ali",
       "status": "draft"
+    },
+    {
+      "title": "puma",
+      "description": "shoes",
+      "price": "20",
+      "creator": "Ali",
+      "status": "draft",
+      "id": "djd4CDw"
     }
   ]
 }

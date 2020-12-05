@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Button, Container, Form, Row, Col } from 'react-bootstrap';
-// import Input from '../../shared/components/FormElements/Input';
 import { useForm } from '../../shared/hooks/form-hook';
 import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from '../../shared/util/validators';
 import MyFormGroup from '../../shared/components/FormElements/MyFormGroup';
@@ -8,9 +7,6 @@ import { AuthContext } from '../../shared/context/auth-context';
 import { useHttpClient } from '../../shared/hooks/http-hook';
 
 const Login = () => {
-
-    // const [isLoading, setIsLoading] = useState(false);
-    // const [error, setError] = useState(false);
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient();
 
@@ -31,64 +27,28 @@ const Login = () => {
         false
     );
 
-    const placeSubmitHandler = event => {
+    const placeSubmitHandler = async event => {
         event.preventDefault();
         console.log(formState.inputs); // send this to the backend!
         try {
-            sendRequest(
-                'http://localhost:3001/users',
-                'POST',
-                JSON.stringify({
-                    email: formState.inputs.email.value,
-                    first_name: 'new',
-                    password: formState.inputs.password.value
-                }),
-                {
-                    'Content-Type': 'application/json'
-                }
-            ).then(res => {
+            const response = await fetch(
+                'http://localhost:3001/users?email=' + formState.inputs.email.value
+            );
+
+            const responseData = await response.json();
+
+            console.log(responseData);
+            console.log(response.status);
+            if (responseData.length > 0) {
                 console.log('success');
-                auth.login()
-            });
+                auth.login(responseData[0].username);
+            }
 
         } catch (err) {
             console.log(err);
             console.log('error happened on login');
         }
     };
-
-
-    // const placeSubmitHandler = event => {
-    //     event.preventDefault();
-    //     setIsLoading(true);
-    //     console.log(formState.inputs); // send this to the backend!
-
-    //     try {
-    //         setTimeout(function () { //Start the timer
-    //             console.log('delayed'); //After 1 second, set render to true
-    //         }.bind(this), 1000)
-    //         const response = fetch('http://localhost:3001/users', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify({
-    //                 email: formState.inputs.email.value,
-    //                 first_name: 'new',
-    //                 password: formState.inputs.password.value
-    //             })
-    //         }).then(response => response.json())
-    //             .then(data => {
-    //                 console.log(data);
-    //                 setIsLoading(false);
-    //                 auth.login();
-    //             });
-
-    //     } catch (err) {
-    //         setIsLoading(false);
-    //     }
-
-    // };
 
     return (
         <Container style={{ backgroundColor: 'lightgrey' }}>

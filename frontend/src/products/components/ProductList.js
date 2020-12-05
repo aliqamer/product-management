@@ -20,7 +20,7 @@ const ProductList = (props) => {
     return <Container>
         <Col>
             <Row><Col><h1>Product list</h1></Col> <Col></Col>
-                <Col><Link to="/products/new"><Button onClick={addNewProduct} style={{ marginTop: '10px' }}>Add new Product</Button></Link>
+                <Col><Link to="/products/new"><Button variant="dark" onClick={addNewProduct} style={{ marginTop: '10px' }}>Add new Product</Button></Link>
                 </Col>
             </Row>
             <Row>
